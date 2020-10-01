@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6991405-d1f4-400d-9abd-2f476dd99abf" name="Default Changelist" comment="" />
+    <list default="true" id="427e1fc9-44ac-4935-a8f8-2b22a296b0c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="composer.json" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -145,7 +140,7 @@
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1he3UyueSemua7aNmGNLE9KSU9h" />
+  <component name="ProjectId" id="1iI8YcLXkdvwVyR1fag6246d8t4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -153,7 +148,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -165,13 +159,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e6991405-d1f4-400d-9abd-2f476dd99abf" name="Default Changelist" comment="" />
-      <created>1600357750314</created>
+      <changelist id="427e1fc9-44ac-4935-a8f8-2b22a296b0c4" name="Default Changelist" comment="" />
+      <created>1601583795097</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600357750314</updated>
-      <workItem from="1600357751865" duration="1718000" />
-      <workItem from="1600359477733" duration="12613000" />
+      <updated>1601583795097</updated>
+      <workItem from="1601583796992" duration="1191000" />
     </task>
     <servers />
   </component>
@@ -179,29 +172,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="269" y="185" width="732" height="644" key="#Inspections" timestamp="1600439735546">
-      <screen x="0" y="27" width="1280" height="953" />
+    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1601584984696">
+      <screen x="0" y="27" width="1920" height="1009" />
     </state>
-    <state x="269" y="185" width="732" height="644" key="#Inspections/0.27.1280.953@0.27.1280.953" timestamp="1600439735546" />
-    <state x="285" y="127" width="700" height="759" key="#PHP" timestamp="1600358918660">
-      <screen x="0" y="27" width="1280" height="953" />
-    </state>
-    <state x="285" y="127" width="700" height="759" key="#PHP/0.27.1280.953@0.27.1280.953" timestamp="1600358918660" />
-    <state x="98" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600358928864">
-      <screen x="0" y="27" width="1280" height="953" />
-    </state>
-    <state x="98" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1280.953@0.27.1280.953" timestamp="1600358928864" />
-    <state x="347" y="431" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600457674997">
-      <screen x="0" y="27" width="1280" height="953" />
-    </state>
-    <state x="347" y="431" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1280.953@0.27.1280.953" timestamp="1600457674997" />
-    <state x="418" y="264" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600358906473">
-      <screen x="0" y="27" width="1280" height="953" />
-    </state>
-    <state x="418" y="264" width="424" height="491" key="FileChooserDialogImpl/0.27.1280.953@0.27.1280.953" timestamp="1600358906473" />
-    <state x="266" y="587" width="600" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1600359862661">
-      <screen x="0" y="27" width="1280" height="953" />
-    </state>
-    <state x="266" y="587" width="600" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1280.953@0.27.1280.953" timestamp="1600359862661" />
+    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1009@0.27.1920.1009" timestamp="1601584984696" />
   </component>
 </project>
