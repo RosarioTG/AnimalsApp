@@ -19,6 +19,7 @@ class CreateAnimalsTable extends Migration
             $table->string('description');
             $table->string('species');
             $table->string('image');
+
             $table->timestamps();
         });
     }
