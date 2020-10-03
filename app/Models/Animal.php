@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Animal extends Model
 {
     use HasFactory;
+   
+    protected $filleable = ['name','description','species','image'];
+
 }

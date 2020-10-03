@@ -19,6 +19,17 @@
 .e{
     font-size: 25px;
 }
+
+.clase{
+    width: 30%;
+  
+    margin-left: 3%;
+    margin-top: 2%;
+    float: left;   
+    margin-bottom: 2%;
+   
+}
+
  </style>
    <body>
 
@@ -42,7 +53,7 @@
 <!-- Dark Header component -->
  <!-- Fontswesome -->
   <header class="text-gray-100  body-font shadow w-full bg-black fondo ">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a
                 class="flex order-first ">
                  <span class="ml-3 text-xl"> Especies que podes encontrar </span>
@@ -56,39 +67,31 @@
                 <a
                     class="hover:text-gray-900 cursor-pointer border-b border-transparent hover:border-indigo-600">Anfibios </a>
             </nav>
-          
-        </div>
+            
+  </div>
     </header>
 <!-- component -->
-<head>  <script src="https://kit.fontawesome.com/479346cc73.js" crossorigin="anonymous"></script>
-</head>
 
-<body class="  h-250">
-    <div class="  margen grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-2 m-5 mb-10">
-
-        <div class="bg-white shadow-xl rounded-lg overflow-hidden">
-            <div class="bg-cover bg-center h-56 p-4"
-                style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNvq5eKR4Tmqd6OykTcx_IPQdMLdxeinpIIg&usqp=CAU)">
-
-            </div>
-            <div class="m-2 text-justify text-sm">
-                  <h2 class=" font-bold h-2 mb-5 text-center nombre ">canguro</h2>
-                <p class=" text-xs p-3 texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore Author portrait ; https://karina-balzer.fr/portfolio/glamour/
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                 </p>
-                 <h1 class="e">Especie : mamifero </h1>
-
-            </div>
-            <div class="w-full text-center  "><button class=" text-gray-400 text-lg mb-2"><i
-                        class="fas fa-plus-circle"></i></button>
-            </div>
-        </div>
-
-       
-        
+ @foreach ($animals as $Animal)
+ <div class="clase " >
+<div class="md:flex shadow-lg  mx-6 md:mx-auto my-20 max-w-lg md:max-w-2xl h-64">
+<img class="h-full w-full md:w-1/3 object-cover rounded-lg " src="{{$Animal-> image}}" >
+   <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
+      <div class="flex items-center">
+         <h2 class="text-xl text-gray-800 font-medium mr-auto">{{$Animal-> name}}</h2>
+         <p class="text-gray-800 font-semibold tracking-tighter">
+         Especie : {{$Animal-> species}}
+         </p>
+      </div>
+      <p class="text-sm text-gray-700 mt-4">
+      {{$Animal-> description}}
+      </p>
+      </div>
+</div>
+</div>     
+ @endforeach
 
 </html>
-        
+</body>      
     </x-guest-layout>
 
