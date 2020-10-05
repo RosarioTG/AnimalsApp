@@ -14,8 +14,6 @@ use App\Http\Controllers\AnimalsController;
 |
 */
 
-Route::get('/',[AnimalsController::class,'home'] );
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [AnimalsController::class,'admin'] );
+Route::resource('/',AnimalsController::class);

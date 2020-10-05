@@ -9,6 +9,10 @@ class Animal extends Model
 {
     use HasFactory;
    
-    protected $filleable = ['name','description','species','image'];
+    protected $filleable = ['name','description','species_id','image'];
+    public function specie()
+    {
+        return $this -> belongsTo('App\Models\Specie');
+    }
 
 }
