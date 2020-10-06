@@ -15,7 +15,8 @@ class AnimalsController extends Controller
     public function index()
     {
         $species = Specie::all();
-        $animals = Animal::all();
+        $animals = Animal ::all();
+
         return view('welcome',['animals' => $animals,'species'=> $species]);
     }
    public function admin (){

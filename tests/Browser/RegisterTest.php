@@ -32,7 +32,7 @@ class RegisterTest extends DuskTestCase
                     ->assertSee('Name');
             $browser->visit('/user/profile')
 
-                ->assertSee('apellido');
+                ->assertSee('Email');
 
         });
 

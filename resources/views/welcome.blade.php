@@ -36,7 +36,7 @@
 .x{
     width: 50%;
     margin-left: 25%;
-    margin-top: 5%;
+    margin-top: ;
 }
 .color{
     color:#636b6f;
@@ -47,6 +47,9 @@
     width: 40%;
   
   margin-left: 30%;
+}
+.b{
+    
 }
  </style>
    <body>
@@ -72,23 +75,31 @@
  <!-- Fontswesome -->
   <header class="text-gray-100  body-font shadow w-full bg-black fondo ">
  
-<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a
-                class="flex order-first ">
-                 <span class="ml-3 text-xl"> Especies que podes encontrar </span>
-            </a>
-          
-            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto navbar-brand">
-            @foreach ($species as $specie)
-         <a  href="" class="mr-5 hover:text-gray-900 cursor-pointer border-b border-transparent hover:border-indigo-600">{{$specie-> name}}</a>
-      
-                @endforeach
-                 
-            </nav>
-           
-  </div>
+  <div class=" ">
+			<div class="mx-2 text-center">
+				<h1 class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
+					<span class="text-white">Animals</span> App
+           </h1>
+           </div>
     </header>
 <!-- component -->
+
+<div class="bg-white shadow b w-64 ">
+  <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+    <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+      <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Especies </a>
+      </div>
+    <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
+    @foreach ($species as $specie)
+      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">{{$specie-> name}}</a>
+      @endforeach
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+    
+        </div>
+      </div>
+    </nav>
+  </div>
+
 
 @foreach ($species as $specie)
 
@@ -107,7 +118,7 @@
       <div class="flex items-center">
          <h2 class="text-xl text-gray-800 font-medium mr-auto">{{$Animal-> name}}</h2>
          <p class="text-gray-800 font-semibold tracking-tighter">
-         Especie : 
+        Extinto : {{$Animal-> extinto}}
          </p>
       </div>
       <p class="text-sm text-gray-700 mt-4">
