@@ -14,16 +14,16 @@ class AnimalsController extends Controller
      */
     public function index()
     {
-        $species = Specie::all();
-        $animals = Animal ::all();
-
-        return view('welcome',['animals' => $animals,'species'=> $species]);
+        $species = Specie::with('animals') -> get();
+      
+        return view('welcome',['species'=> $species]);
     }
    public function admin (){
         $animals = Animal::all(); 
+        
         return view('dashboard',['animals' => $animals]);
         }
-        
+       
     /**
      * Show the form for creating a new resource.
      *
@@ -31,7 +31,9 @@ class AnimalsController extends Controller
      */
     public function create()
     {
-        return view('create');
+        $species = Specie::all(); 
+        $animals = Animal::all(); 
+        return view('create',['animals' => $animals ,'species' => $species ]);
     }
 
     /**
@@ -44,7 +46,12 @@ class AnimalsController extends Controller
     {
       
       $input = $request->all();
-      Animal::create($input);
+      Animal::create(['name'=> $input['name'] , 
+                     'image'=> $input['image'] ,
+                     'description'=> $input['description'] , 
+                     'extinto'=> $input['extinto'] , 
+                     'specie_id'=> $input['specie_id'] , 
+                     ]);
       return redirect('dashboard');
     }
 
@@ -90,6 +97,7 @@ class AnimalsController extends Controller
      */
     public function destroy(Animal $animal)
     {
-        //
+      $animal ->delete();
+      return redirect('dashboard');
     }
 }

@@ -20,7 +20,7 @@ class CreateAnimalsTable extends Migration
             $table->string('image');
             $table->string('extinto');
             $table->timestamps();
-            $table->foreignId('species_id');
+            $table->foreignId('specie_id');
         });
     }
 

@@ -61,8 +61,18 @@
                @csrf
                 <div class="flex space-x-5 mt-3">
                     <input type="text" name="name" id="name" placeholder=" Name"  class="border p-2  w-1/2">
-                    <input type="text" name="specie_id" id="specie_id" placeholder="specie_id" class="border p-2 w-full mt-3">
+                    <input type="text" name="extinto" id="extinto" placeholder=" Extinto"  class="border p-2  w-1/2">
+                  
                 </div>
+            
+     
+          <div class="relative">
+        <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="specie_id" name="specie_id" >
+        @foreach($species as $specie)
+                <option value="{{$specie -> id}}" selected> {{$specie -> name}}  </option>
+                @endforeach
+        </select>
+        </div>
                 <input type="text" name="image" id="image" placeholder="Image" class="border p-2 w-full mt-3">
                 <textarea name="description" id="description" cols="10" rows="3" placeholder="Description" class="border p-2 mt-3 w-full"></textarea>
 
