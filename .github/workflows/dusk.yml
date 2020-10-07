@@ -9,14 +9,14 @@ jobs:
    runs-on: ubuntu-latest
    services:
     postgres:
-        image: postgres:9.6
-        env:
+      image: postgres:9.6
+      env:
             POSTGRES_USER: mydb 
             POSTGRES_PASSWORD: thisisasecretpassword
             POSTGRES_DB: laravel
-        ports:
-            -54321:5432
-    env:
+      ports:
+         - 5432:5432
+   env:
         DB_USERNAME: mydb
         DB_PASSWORD: thisisasecretpassword
         APP_URL: "http:/127.0.0.1:8000"
