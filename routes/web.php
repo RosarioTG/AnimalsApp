@@ -16,4 +16,5 @@ use App\Http\Controllers\AnimalsController;
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [AnimalsController::class,'admin'] );
+Route::middleware(['auth:sanctum', 'verified'])->get('/adminSpecies', [AnimalsController::class,'admin2'] );
 Route::resource('/',AnimalsController::class);

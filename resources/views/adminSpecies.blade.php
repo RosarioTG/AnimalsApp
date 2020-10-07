@@ -27,16 +27,11 @@
          
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
-              <p>Especies Actualmente Cargadas en pagina</p>
+              <p>Animales Actualmente Cargados en pagina</p>
             </nav>
          </div>
          
-         <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
-            <div class="auth flex items-center w-full md:w-full">
-               
-              
-            </div>
-           </div>
+         
       </div>
    </nav>
 <body class="antialiased font-sans bg-gray-200">
@@ -59,15 +54,15 @@
                             <tr>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                 Nombre Animal
+                                 Nombre   Especie
                                 </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                   Especie
+                                  id
                                 </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                peligro de extincion 
+                                fecha de creacion
                                 </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -75,53 +70,59 @@
                                 </th>
                             </tr>
                         </thead>
-                        <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
-       
-                        </tbody>
-                     
-                        @foreach ($animals as $Animal)
+                        <tbody>
+                        @foreach ($species as $specie)
                             <tr>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <div class="flex items-center">
                                        
                                         <div class="ml-3">
                                             <p class="text-gray-900 whitespace-no-wrap">
-                                            {{$Animal-> name}}
+                                            {{$specie-> name}}
                                             </p>
                                         </div>
                                     </div>
                                 </td>
+                               
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">{{$Animal-> specie_id}}</p>
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                    {{$specie-> id}}
+                                    </p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
-                                    {{$Animal-> extinto}}
+                                    {{$specie-> created_at }}
                                     </p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href=""><span
                                 <div class="bg-gray-200 text-sm text-gray-500 leading-none border-2 border-gray-200 rounded-full inline-flex">
                               
-                          
+                            <form >
+                            {{ method_field('DELETE') }}
+                              @csrf
+                            <button type="submit" >Delete</button>
+                            </form>
                             </li>
                            </form>
                           
                                 </td>
                             </tr>
-                         </form>
+                        
+                        
+
+
+                    </form>
    
                                 </td>
                             </tr>
                           @endforeach
-                       
-                   
+                        </tbody>
                     </table>
-                    <div class="auth flex items-center w-full md:w-full">
-               
-               <a href="{{ url('adminSpecies') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Ver Especie</a>
-            </div>
-           </div>
+                    <div
+                        class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
+                       
+                    </div>
                 </div>
             </div>
         </div>
