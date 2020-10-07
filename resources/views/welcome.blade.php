@@ -110,7 +110,7 @@
           <p class="pb-6 "> {{$specie -> description}}</p>
 </div>
 
-@foreach ($animals as $Animal)
+@foreach ($specie->animals as $Animal)
 
 <div class="md:flex shadow-lg  mx-6 md:mx-auto my-20 max-w-lg md:max-w-2xl h-64">
 <img class="h-full w-full md:w-1/3 object-cover rounded-lg " src="{{$Animal-> image}}" >
