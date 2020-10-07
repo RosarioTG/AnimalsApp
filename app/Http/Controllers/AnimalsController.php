@@ -23,7 +23,11 @@ class AnimalsController extends Controller
         
         return view('dashboard',['animals' => $animals]);
         }
-       
+        public function admin2(){
+            $species = Specie::all(); 
+            
+            return view('adminSpecies',['species' => $species]);
+            }
     /**
      * Show the form for creating a new resource.
      *
@@ -44,8 +48,7 @@ class AnimalsController extends Controller
      */
     public function store(Request $request)
     {
-      
-      $input = $request->all();
+       $input = $request->all();
       Animal::create(['name'=> $input['name'] , 
                      'image'=> $input['image'] ,
                      'description'=> $input['description'] , 
