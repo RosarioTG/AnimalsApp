@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalsController;
-
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\SpecieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,14 @@ use App\Http\Controllers\AnimalsController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [AnimalsController::class,'admin'] );
-Route::middleware(['auth:sanctum', 'verified'])->get('/adminSpecies', [AnimalsController::class,'admin2'] );
-Route::resource('/',AnimalsController::class);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::resource('Animals',AnimalsController::class);
+Route::resource('/',homeController::class);
+Route::resource('Species',SpecieController::class);

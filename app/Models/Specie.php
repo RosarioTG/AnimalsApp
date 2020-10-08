@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Specie extends Model
 {
     use HasFactory;
-    protected $filleable = ['name','description'];
+    protected $fillable = ['name','description'];
     public function  animals()
     {
     return $this->hasMany('App\Models\Animal');

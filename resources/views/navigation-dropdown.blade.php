@@ -15,6 +15,12 @@
                     <x-jet-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href=" {{ route('Animals.index') }}" :active="request()->routeIs('Animals.*')">
+                        {{ __('Administracion tabla Infromacion Animals') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href=" {{ route('Species.index') }}" :active="request()->routeIs('Species.*')">
+                        {{ __('Administracion tabla Infromacion Species') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -107,6 +113,12 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="  {{route('Animals.index') }}" :active="request()->routeIs('Animals.*')">
+                {{ __('Administracion') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href=" {{ route('Species.index') }}" :active="request()->routeIs('Species.*')">
+                        {{ __('Administracion tabla Infromacion Species') }}
             </x-jet-responsive-nav-link>
         </div>
 

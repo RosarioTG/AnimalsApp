@@ -19,7 +19,6 @@
 .e{
     font-size: 25px;
 }
-
 .clase{
     width: 30%;
   
@@ -139,4 +138,3 @@
 </html>
 </body>      
     </x-guest-layout>
-

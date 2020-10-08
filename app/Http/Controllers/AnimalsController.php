@@ -14,20 +14,10 @@ class AnimalsController extends Controller
      */
     public function index()
     {
-        $species = Specie::with('animals') -> get();
-      
-        return view('welcome',['species'=> $species]);
-    }
-   public function admin (){
+        $species = Specie::all(); 
         $animals = Animal::all(); 
-        
-        return view('dashboard',['animals' => $animals]);
-        }
-        public function admin2(){
-            $species = Specie::all(); 
-            
-            return view('adminSpecies',['species' => $species]);
-            }
+        return view('Animals.index',['animals' => $animals ,'species' => $species ]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +27,7 @@ class AnimalsController extends Controller
     {
         $species = Specie::all(); 
         $animals = Animal::all(); 
-        return view('create',['animals' => $animals ,'species' => $species ]);
+        return view('Animals.create',['animals' => $animals ,'species' => $species ]);
     }
 
     /**
@@ -55,7 +45,7 @@ class AnimalsController extends Controller
                      'extinto'=> $input['extinto'] , 
                      'specie_id'=> $input['specie_id'] , 
                      ]);
-      return redirect('dashboard');
+      return redirect('Animals');
     }
 
     /**
@@ -77,7 +67,8 @@ class AnimalsController extends Controller
      */
     public function edit(Animal $animal)
     {
-        //
+        $species = Specie::all(); 
+        return view ('Animals.edit', ['animal' => $animal ,'species' => $species]);
     }
 
     /**
@@ -89,7 +80,14 @@ class AnimalsController extends Controller
      */
     public function update(Request $request, Animal $animal)
     {
-        //
+       $input=$request ->all();
+       $animal -> update(['name'=> $input['name'] , 
+                         'image'=> $input['image'] ,
+                        'description'=> $input['description'] , 
+                        'extinto'=> $input['extinto'] , 
+                       'specie_id'=> $input['specie_id'] , 
+       ]);
+       return redirect('Animals.index');
     }
 
     /**
@@ -100,7 +98,10 @@ class AnimalsController extends Controller
      */
     public function destroy(Animal $animal)
     {
-      $animal ->delete();
-      return redirect('dashboard');
+        $animal->delete();
+        return redirect('Animals');
+
+
+      ;
     }
 }

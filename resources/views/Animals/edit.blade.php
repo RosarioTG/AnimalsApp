@@ -36,6 +36,9 @@
 </head>
   
   <body>
+  <form method= 'POST' action="{{route('Animals.update',$animal->id)}}" class="form bg-white p-6 my-10 relative">
+  @method('PUT')
+  @csrf
   <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
       <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
          <label for="menu-toggle" class="cursor-pointer md:hidden block">
@@ -57,11 +60,10 @@
          </div>
       </div>
    </nav>
-            <form method= 'POST' action="   {{route('store')}}" class="form bg-white p-6 my-10 relative">
-               @csrf
+            
                 <div class="flex space-x-5 mt-3">
-                    <input type="text" name="name" id="name" placeholder=" Name"  class="border p-2  w-1/2">
-                    <input type="text" name="extinto" id="extinto" placeholder=" Extinto"  class="border p-2  w-1/2">
+                    <input type="text" name="name" id="name" placeholder="{{$animal -> name}} "  class="border p-2  w-1/2">
+                    <input type="text" name="extinto" id="extinto" placeholder=" {{$animal -> extinto}} "  class="border p-2  w-1/2">
                   
                 </div>
             
@@ -74,11 +76,11 @@
         </select>
         </div>
                 <input type="text" name="image" id="image" placeholder="Image" class="border p-2 w-full mt-3">
-                <textarea name="description" id="description" cols="10" rows="3" placeholder="Description" class="border p-2 mt-3 w-full"></textarea>
+                <textarea name="description" id="description" cols="10" rows="3" placeholder="{{$animal -> description}} " class="border p-2 mt-3 w-full"></textarea>
 
                 <input type="submit" value="Insertar" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3">
 
-            </form>
+          
     
   </body>
 </html>

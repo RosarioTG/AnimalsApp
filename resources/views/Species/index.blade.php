@@ -27,10 +27,10 @@
          
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
-              <p>Animales Actualmente Cargados en pagina</p>
+              <p>Species Actualmente Cargadas en pagina</p>
             </nav>
          </div>
-         
+         <a href="{{ url('Species/create') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
          
       </div>
    </nav>
@@ -103,6 +103,11 @@
                               @csrf
                             <button type="submit" >Delete</button>
                             </form>
+                            <form >
+                            {{ method_field('DELETE') }}
+                              @csrf
+                            <button type="submit" >Edit</button>
+                            </form>
                             </li>
                            </form>
                           
@@ -120,7 +125,7 @@
                         </tbody>
                     </table>
                     <div
-                        class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
+                        class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
                        
                     </div>
                 </div>
