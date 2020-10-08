@@ -98,7 +98,7 @@ class AnimalsController extends Controller
      */
     public function destroy(Animal $animal)
     {
-        $animal->delete();
+        $animal -> delete();
         return redirect('Animals');
 
 
