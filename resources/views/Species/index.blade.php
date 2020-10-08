@@ -27,7 +27,7 @@
          
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
-              <p>Species Actualmente Cargadas en pagina</p>
+              <p>Species Actualmente Cargadas en pagina1</p>
             </nav>
          </div>
          <a href="{{ url('Species/create') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
