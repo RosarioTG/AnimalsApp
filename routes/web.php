@@ -23,6 +23,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::resource('Animals',AnimalsController::class);
+Route::resource('animal',AnimalsController::class);
 Route::resource('/',homeController::class);
 Route::resource('Species',SpecieController::class);

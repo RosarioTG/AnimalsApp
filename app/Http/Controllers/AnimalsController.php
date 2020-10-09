@@ -16,7 +16,7 @@ class AnimalsController extends Controller
     {
         $species = Specie::all(); 
         $animals = Animal::all(); 
-        return view('Animals.index',['animals' => $animals ,'species' => $species ]);
+        return view('animal.index',['animals' => $animals ,'species' => $species ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -27,7 +27,7 @@ class AnimalsController extends Controller
     {
         $species = Specie::all(); 
         $animals = Animal::all(); 
-        return view('Animals.create',['animals' => $animals ,'species' => $species ]);
+        return view('animal.create',['animals' => $animals ,'species' => $species ]);
     }
 
     /**
@@ -45,7 +45,7 @@ class AnimalsController extends Controller
                      'extinto'=> $input['extinto'] , 
                      'specie_id'=> $input['specie_id'] , 
                      ]);
-      return redirect('Animals');
+      return redirect('animal');
     }
 
     /**
@@ -68,7 +68,7 @@ class AnimalsController extends Controller
     public function edit(Animal $animal)
     {
         $species = Specie::all(); 
-        return view ('Animals.edit', ['animal' => $animal ,'species' => $species]);
+        return view ('animal.edit', ['animal' => $animal ,'species' => $species]);
     }
 
     /**
@@ -87,7 +87,7 @@ class AnimalsController extends Controller
                         'extinto'=> $input['extinto'] , 
                        'specie_id'=> $input['specie_id'] , 
        ]);
-       return redirect('Animals.index');
+       return redirect('animal');
     }
 
     /**
@@ -99,7 +99,7 @@ class AnimalsController extends Controller
     public function destroy(Animal $animal)
     {
         $animal -> delete();
-        return redirect('Animals');
+        return redirect('animal');
 
 
       ;

@@ -2,54 +2,25 @@
 <head>
 </head>
 <style>
-    .fondo{
+.fondo{
         background:#636b6f;
-    }
- .margen{
-     margin-top:100px;
- }
- .nombre {
-     color:#636b6f;
-     font-size: 40px;
-     margin-bottom: 50px;
- }
- .texto {
-    font-size: 20px;
-}
-.e{
-    font-size: 25px;
-}
-.clase{
-    width: 30%;
-  
-    margin-left: 3%;
-    margin-top: 2%;
-    float: left;   
-    margin-bottom: 2%;
-   
-}
+  }
 .x_specie{
     border:5px solid #636b6f ;
-    
-}
+    }
 .x{
     width: 50%;
     margin-left: 25%;
-    margin-top: ;
-}
+  }
 .color{
     color:#636b6f;
     text-transform: uppercase;
 }
-.es{
-    
-    width: 40%;
+.es{ width: 40%;
   
   margin-left: 30%;
 }
-.b{
-    
-}
+
  </style>
    <body>
 
