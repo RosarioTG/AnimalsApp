@@ -27,7 +27,7 @@
          
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
-            <p>Animales Actualmente Cargados en pagina</p>
+            <p>Animales Actualmente Cargadosdfatgert en pagina</p>
             </nav>
          </div>
          
