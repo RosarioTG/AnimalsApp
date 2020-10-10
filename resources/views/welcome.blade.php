@@ -2,22 +2,12 @@
 <head>
 </head>
 <style>
-.fondo{
-        background:#636b6f;
-  }
-.x_specie{
-    border:5px solid #636b6f ;
-    }
 .x{
     width: 50%;
     margin-left: 25%;
   }
-.color{
-    color:#636b6f;
-    text-transform: uppercase;
-}
-.es{ width: 40%;
-  
+.es{
+   width: 40%;
   margin-left: 30%;
 }
 
@@ -42,13 +32,12 @@
     </nav>
     <!-- component -->
 <!-- Dark Header component -->
- <!-- Fontswesome -->
-  <header class="text-gray-100  body-font shadow w-full bg-black fondo ">
- 
+ <!-- Fontswesome -->   
+  <header class="text-gray-100  body-font shadow w-full  bg-gray-400 ; ">
   <div class=" ">
 			<div class="mx-2 text-center">
-				<h1 class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
-					<span class="text-white">Animals</span> App
+				<h1 class="text-gray-100 font-serif text-4xl  xs:text-5xl md:text-6xl">
+					<span class="text-white font-serif"></span> Animals App
            </h1>
            </div>
     </header>
@@ -57,11 +46,11 @@
 <div class="bg-white shadow b w-64 ">
   <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
     <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
-      <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Especies </a>
+      <a href="#" class="text-center font-serif md:text-4xl text-gray-500 text-900">Especies </a>
       </div>
     <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
     @foreach ($species as $specie)
-      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">{{$specie-> name}}</a>
+      <a class="block text-lg px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">{{$specie-> name}}</a>
       @endforeach
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
     
@@ -73,10 +62,10 @@
 
 @foreach ($species as $specie)
 
-<div class="x " >
-<div class="x_specie" >
-<h2 class="text-center  md:text-4xl color text-900">{{$specie -> name}}</h2>
-<div class=" es px-4 text-center lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+<div class="  x " >
+<div class="x_specie mb-2 border-4 border-600 border-gray-600">
+<h2 class="text-center font-serif md:text-4xl text-gray-500 text-900">{{$specie -> name}}</h2>
+<div class=" es  px-4 text-center lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
           <p class="pb-6 "> {{$specie -> description}}</p>
 </div>
 
