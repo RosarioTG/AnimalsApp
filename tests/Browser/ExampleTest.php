@@ -20,5 +20,8 @@ class ExampleTest extends DuskTestCase
                     ->assertSee('Animals');
 
         });
+       
     }
+
+  
 }
