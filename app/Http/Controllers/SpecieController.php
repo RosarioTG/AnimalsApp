@@ -15,7 +15,7 @@ class SpecieController extends Controller
     public function index()
     {
         $species = Specie::all(); 
-        return view('Species.index',['species' => $species ]);
+        return view('specie.index',['species' => $species ]);
     }
 
     /**
@@ -27,7 +27,7 @@ class SpecieController extends Controller
     {
         $species = Specie::all(); 
        
-        return view('Species.create',['species' => $species ]);
+        return view('specie.create',['species' => $species ]);
     }
 
     /**
@@ -41,7 +41,7 @@ class SpecieController extends Controller
         $input = $request->all();
         Specie::create(['name'=> $input['name'] , 
                        'description'=> $input['description'] ]);
-        return redirect('Species');
+        return redirect('specie');
     }
 
     /**
@@ -63,7 +63,8 @@ class SpecieController extends Controller
      */
     public function edit(Specie $specie)
     {
-        //
+       
+        return view ('specie.edit', ['specie' => $specie ]);
     }
 
     /**
@@ -75,7 +76,11 @@ class SpecieController extends Controller
      */
     public function update(Request $request, Specie $specie)
     {
-        //
+        $input=$request ->all();
+       $specie -> update(['name'=> $input['name'] , 
+                         'description'=> $input['description'] , 
+                        ]);
+       return redirect('specie');
     }
 
     /**
@@ -86,6 +91,7 @@ class SpecieController extends Controller
      */
     public function destroy(Specie $specie)
     {
-        //
+        $specie -> delete();
+        return redirect('specie');
     }
 }
