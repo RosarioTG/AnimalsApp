@@ -31,30 +31,46 @@
     </header>
 <!-- component -->
 
-<div class="bg-white shadow b w-64 mr-8 ">
-  <div>
-    <div class=" flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
-      <a class="  text-center font-serif md:text-4xl text-gray-500 text-900">Especies </a>
+<nav  class="fixed inset-x-0   justify-between z-10  ">
+<div class="bg-white float-right  shadow w-64 my-2">
+<div class="   flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+      <a class="  text-center font-serif md:text-4xl text-gray-500 text-900">Especies</a>
       </div>
-    <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
-    @foreach ($species as $specie)
-      <a class="block text-lg px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">{{$specie-> name}}</a>
+  <ul class="list-reset">
+  @foreach ($species as $specie)
+   <li class="-mb-px mr-1">
+   <a href="{{$specie -> name}}" class="block p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter border-r-4">{{$specie -> name}}</a>
+   </li>
       @endforeach
-      <div @click.away="open = false" class="relative" x-data="{ open: false }">
-    
-        </div>
-      </div>
-    </nav>
+   
+  </ul>
   </div>
-  
- 
+</nav>
+
+<nav  class="fixed inset-x-0   justify-between z-10  ">
+<div class="bg-white   shadow w-64 my-2">
+<div class="   flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+      <a class="  text-center font-serif md:text-4xl text-gray-500 text-900">Animales</a>
+      </div>
+  <ul class="list-reset">
+   @foreach ($animals as $animal)
+   <li class="-mb-px mr-1">
+   <a  class="block p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter border-r-4">{{$animal -> name}}</a>
+   </li>
+      @endforeach
+   
+  </ul>
+  </div>
+</nav>
+
 @foreach ($species as $specie)
 
-<div class=" xl:max-w-6xl mx-auto" >
+<div class=" xl:max-w-6xl mx-auto  mt-10" >
 <div class="x_specie mb-2 border-4 border-600 border-gray-600">
-<h2 class="text-center underline  mt-6 font-serif md:text-4xl text-gray-500 text-900">{{$specie -> name}}</h2>
+<h2 class="text-center underline  mt-6 font-serif md:text-4xl text-gray-500 text-900" name="{{$specie -> name}}">{{$specie -> name}}</h2>
 <div class=" w-full bg-white shadow flex flex-col my-4 p-6  text-center mx-auto px-4 text-center lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
           <p class="pb-6 text-lg"> {{$specie -> description}}</p>
+          
 </div>
 
 @foreach ($specie->animals as $Animal)
@@ -63,7 +79,7 @@
 <img class="h-full w-full md:w-1/3 object-cover rounded-lg " src="{{$Animal-> image}}" >
    <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
       <div class="flex items-center">
-         <h2 class="text-xl text-gray-800 font-medium mr-auto">{{$Animal-> name}}</h2>
+         <h2 class="text-xl text-gray-800 font-medium mr-auto " >{{$Animal-> name}}</h2>
          <p class="text-gray-800 font-semibold tracking-tighter">
         Extinto : {{$Animal-> extinto}}
          </p>

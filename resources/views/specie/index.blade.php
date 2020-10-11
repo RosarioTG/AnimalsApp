@@ -1,37 +1,17 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Animals App Admin') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!--
-  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
-  Read the documentation to get started: https://tailwindui.com/documentation
--->
-<div class="flex flex-col">
-  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-      <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-      <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
-      <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
-         <label for="menu-toggle" class="cursor-pointer md:hidden block">
-            <svg class="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-               <title>menu</title>
-               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-         </label>
-         <input class="hidden" type="checkbox" id="menu-toggle">
+<x-animal>
          
-         <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
-            <nav>
-              <p>Species Actualmente Cargadas en pagina</p>
-            </nav>
-         </div>
-         <a href="{{ url('specie/create') }}" dusk="create" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
+<div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+                            <nav>
+                                <p>Species Actualmente Cargadas en pagina</p>
+                            </nav>
+                    </div>
          
+         <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+            <div class="auth flex items-center w-full md:w-full">
+               
+              
+            </div>
+           </div>
       </div>
    </nav>
 <body class="antialiased font-sans bg-gray-200">
@@ -43,7 +23,10 @@
                 
                 </div>
                 <div class="block relative">
-                   
+       
+               
+               <a href="{{ url('animal/create') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
+            </div>
                 </div>
             </div>
             <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -147,4 +130,4 @@
 
         </div>
     </div>
-</x-app-layout>
+</x-animal>

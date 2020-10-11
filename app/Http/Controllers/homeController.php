@@ -16,8 +16,8 @@ class homeController extends Controller
     public function index()
     {
         $species = Specie::with('animals') -> get();
-      
-        return view('welcome',['species'=> $species]);
+         $animals = Animal::all();
+        return view('welcome',['species'=> $species ,'animals'=> $animals ]);
     }
 
     /**
