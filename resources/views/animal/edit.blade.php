@@ -55,7 +55,7 @@
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="specie_id" name="specie_id" >
        
         @foreach($species as $specie)
-                <option value="{{$specie -> id}}" selected> {{$specie -> name}}  </option>
+               <option value="{{ $specie->id }}" @if($animal->specie_id == $specie->id) selected @endif >{{ $specie->name }}</option>
                 @endforeach
         </select>
         </div>

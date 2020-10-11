@@ -15,14 +15,17 @@ use App\Http\Controllers\SpecieController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::resource('animal',AnimalsController::class);
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::resource('animal',AnimalsController::class);
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::resource('Species',SpecieController::class);
+});
 Route::resource('/',homeController::class);
-Route::resource('Species',SpecieController::class);

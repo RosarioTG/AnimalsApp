@@ -1,17 +1,6 @@
 <x-guest-layout>
 <head>
 </head>
-<style>
-.x{
-    width: 50%;
-    margin-left: 25%;
-  }
-.es{
-   width: 40%;
-  margin-left: 30%;
-}
-
- </style>
    <body>
 
 	<nav id="nav" class="fixed inset-x-0 top-0 flex flex-row justify-between z-10 text-white bg-transparent">
@@ -34,7 +23,6 @@
 <!-- Dark Header component -->
  <!-- Fontswesome -->   
   <header class="text-gray-100  body-font shadow w-full  bg-gray-400 ; ">
-  <div class=" ">
 			<div class="mx-2 text-center">
 				<h1 class="text-gray-100 font-serif text-4xl  xs:text-5xl md:text-6xl">
 					<span class="text-white font-serif"></span> Animals App
@@ -62,11 +50,11 @@
 
 @foreach ($species as $specie)
 
-<div class="  x " >
+<div class=" xl:max-w-6xl mx-auto" >
 <div class="x_specie mb-2 border-4 border-600 border-gray-600">
-<h2 class="text-center font-serif md:text-4xl text-gray-500 text-900">{{$specie -> name}}</h2>
-<div class=" es  px-4 text-center lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
-          <p class="pb-6 "> {{$specie -> description}}</p>
+<h2 class="text-center underline  mt-6 font-serif md:text-4xl text-gray-500 text-900">{{$specie -> name}}</h2>
+<div class=" w-full bg-white shadow flex flex-col my-4 p-6  text-center mx-auto px-4 text-center lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+          <p class="pb-6 text-lg"> {{$specie -> description}}</p>
 </div>
 
 @foreach ($specie->animals as $Animal)
@@ -80,7 +68,7 @@
         Extinto : {{$Animal-> extinto}}
          </p>
       </div>
-      <p class="text-sm text-gray-700 mt-4">
+      <p class=" text-lgtext-gray-700 mt-4">
       {{$Animal-> description}}
       </p>
       </div>

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\Specie;
 class AnimalsController extends Controller
 {
+    public function __construct()
+    {
+       
+    }
     /**
      * Display a listing of the resource.
      *
