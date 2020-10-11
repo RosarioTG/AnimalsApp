@@ -31,10 +31,10 @@
     </header>
 <!-- component -->
 
-<div class="bg-white shadow b w-64 ">
-  <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
-    <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
-      <a href="#" class="text-center font-serif md:text-4xl text-gray-500 text-900">Especies </a>
+<div class="bg-white shadow b w-64 mr-8 ">
+  <div>
+    <div class=" flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+      <a class="  text-center font-serif md:text-4xl text-gray-500 text-900">Especies </a>
       </div>
     <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
     @foreach ($species as $specie)
@@ -46,8 +46,8 @@
       </div>
     </nav>
   </div>
-
-
+  
+ 
 @foreach ($species as $specie)
 
 <div class=" xl:max-w-6xl mx-auto" >

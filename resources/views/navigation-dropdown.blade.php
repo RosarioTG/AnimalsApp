@@ -18,7 +18,7 @@
                     <x-jet-nav-link href=" {{ route('animal.index') }}" :active="request()->routeIs('Animals.*')">
                         {{ __('Administracion  Animals') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href=" {{ route('Species.index') }}" :active="request()->routeIs('Species.*')">
+                    <x-jet-nav-link href=" {{ route('specie.index') }}" :active="request()->routeIs('Species.*')">
                         {{ __('AdministracionSpecies') }}
                     </x-jet-nav-link>
                 </div>
@@ -117,7 +117,7 @@
             <x-jet-responsive-nav-link href="  {{route('animal.index') }}" :active="request()->routeIs('Animals.*')">
                 {{ __('Administracion') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href=" {{ route('Species.index') }}" :active="request()->routeIs('Species.*')">
+            <x-jet-responsive-nav-link href=" {{ route('specie.index') }}" :active="request()->routeIs('Species.*')">
                         {{ __('Administracion  Species') }}
             </x-jet-responsive-nav-link>
         </div>
