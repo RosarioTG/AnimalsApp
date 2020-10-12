@@ -25,7 +25,7 @@
                 <div class="block relative">
        
                
-               <a href="{{ url('animal/create') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
+               <a  dusk='create'href="{{ url('specie/create') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
             </div>
                 </div>
             </div>

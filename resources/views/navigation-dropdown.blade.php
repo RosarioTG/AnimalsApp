@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Administracion') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href=" {{ route('animal.index') }}" :active="request()->routeIs('Animals.*')">
                         {{ __('Administracion  Animals') }}

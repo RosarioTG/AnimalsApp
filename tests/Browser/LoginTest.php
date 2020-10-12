@@ -28,7 +28,7 @@ class LoginTest extends DuskTestCase
                     ->type('email',$user->email)
                     ->type('password','12345678')
                     ->press('LOGIN')
-                    ->assertSee('Welcome to your Jetstream application!');
+                    ->assertSee('Paginas para Agregar Animales y Especies');
         });
     }
 
