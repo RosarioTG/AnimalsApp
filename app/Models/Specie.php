@@ -9,6 +9,7 @@ class Specie extends Model
 {
     use HasFactory;
     protected $fillable = ['name','description'];
+    
     public function  animals()
     {
     return $this->hasMany('App\Models\Animal');
