@@ -25,7 +25,7 @@
   <header class="text-gray-100  body-font shadow w-full  bg-gray-400 ; ">
 			<div class="mx-2 text-center">
 				<h1 class="text-gray-100 font-serif text-4xl  xs:text-5xl md:text-6xl">
-					<span class="text-white font-serif"></span> Animals Appp
+					<span class="text-white font-serif"></span> Animals App
            </h1>
            </div>
     </header>
