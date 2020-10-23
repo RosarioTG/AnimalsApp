@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('current_team_id')->nullable();
+            $table->string('role');
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
         });

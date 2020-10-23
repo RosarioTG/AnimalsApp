@@ -9,10 +9,13 @@ class Animal extends Model
 {
     use HasFactory;
    
-    protected $fillable = ['name','description','specie_id','extinto','image'];
+    protected $fillable = ['name','description','specie_id','extinto','image','user_id'];
     public function specie()
     {
         return $this -> belongsTo('App\Models\Specie');
     }
-
+    public function user()
+    {
+        return $this -> belongsTo('App\Models\User');
+    }
 }

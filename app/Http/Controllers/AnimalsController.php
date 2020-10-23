@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Animal;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Specie;
 class AnimalsController extends Controller
@@ -19,7 +20,7 @@ class AnimalsController extends Controller
     public function index()
     {
         $species = Specie::all(); 
-        $animals = Animal::all(); 
+        $animals = Animal::with('user','specie')->get();
         return view('animal.index',['animals' => $animals ,'species' => $species ]);
     }
     /**
@@ -29,9 +30,11 @@ class AnimalsController extends Controller
      */
     public function create()
     {
+        $this->authorize('create',Animal::class);
+        $users = User::all();
         $species = Specie::all(); 
         $animals = Animal::all(); 
-        return view('animal.create',['animals' => $animals ,'species' => $species ]);
+        return view('animal.create',['animals' => $animals ,'users' => $users ,'species' => $species ]);
     }
 
     /**
@@ -42,12 +45,14 @@ class AnimalsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create',Animal::class);
        $input = $request->all();
       Animal::create(['name'=> $input['name'] , 
                      'image'=> $input['image'] ,
                      'description'=> $input['description'] , 
                      'extinto'=> $input['extinto'] , 
                      'specie_id'=> $input['specie_id'] , 
+                     'user_id'=>$input['user_id'] 
                      ]);
       return redirect('animal');
     }
@@ -71,6 +76,7 @@ class AnimalsController extends Controller
      */
     public function edit(Animal $animal)
     {
+        $this->authorize('update',$animal);
         $species = Specie::all(); 
         return view ('animal.edit', ['animal' => $animal ,'species' => $species]);
     }
@@ -84,6 +90,7 @@ class AnimalsController extends Controller
      */
     public function update(Request $request, Animal $animal)
     {
+        $this->authorize('update',$animal);
        $input=$request ->all();
        $animal -> update(['name'=> $input['name'] , 
                          'image'=> $input['image'] ,
@@ -91,7 +98,7 @@ class AnimalsController extends Controller
                         'extinto'=> $input['extinto'] , 
                        'specie_id'=> $input['specie_id'] , 
        ]);
-       return redirect('animal');
+       return redirect('animal') ->with('success', 'Animal actualizado!');
     }
 
     /**

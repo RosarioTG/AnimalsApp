@@ -44,11 +44,18 @@
                @csrf
                 <div class="flex space-x-5 mt-3">
                     <input type="text" name="name" id="name" placeholder=" Name"  class="border p-2  w-1/2">
+
                     <input type="text" name="extinto" id="extinto" placeholder=" Extinto"  class="border p-2  w-1/2">
-                  
+                   
                 </div>
             
-     
+        <div class="relative">
+        <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="user_id" name="user_id" >
+        @foreach($users as $user)
+                <option value="{{$user -> id}}" selected> {{$user -> name}}  </option>
+                @endforeach
+        </select>
+        </div>
           <div class="relative">
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="specie_id" name="specie_id" >
         @foreach($species as $specie)
