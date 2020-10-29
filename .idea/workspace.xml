@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="427e1fc9-44ac-4935-a8f8-2b22a296b0c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AnimalsApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnimalsApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnimalsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnimalsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Animal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_04_005659_create_animals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_04_005659_create_animals_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/animal/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/AnimalPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/AnimalPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/animal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AnimalFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AnimalFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/SpecieFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/SpecieFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_19_150239_add_column_user_id_in_animals.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_19_150239_add_column_user_id_in_animals.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/AnimalSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AnimalSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SpecieSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SpecieSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/camaleon2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/camaleon2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/animal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/animal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/CreateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/CreateTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/DeleteTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/DeleteTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/EditTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/EditTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,6 +191,9 @@
       <workItem from="1601583796992" duration="1191000" />
       <workItem from="1601587586294" duration="1271000" />
       <workItem from="1603298914437" duration="2456000" />
+      <workItem from="1603404859132" duration="1214000" />
+      <workItem from="1603472964985" duration="770000" />
+      <workItem from="1604000996911" duration="3592000" />
     </task>
     <servers />
   </component>
@@ -191,9 +201,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1601584984696">
+    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603472998216">
       <screen x="0" y="27" width="1920" height="1009" />
     </state>
-    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1009@0.27.1920.1009" timestamp="1601584984696" />
+    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1009@0.27.1920.1009" timestamp="1603472998216" />
   </component>
 </project>

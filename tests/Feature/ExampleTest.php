@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -12,10 +13,24 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testhome()
     {
         $response = $this->get('/');
 
-        $response->assertStatus(500);
+        $response->assertStatus(200);
     }
+    public function testCasSeeDashboardAsUser()
+    {
+        $user = User::factory()->create();
+        $response = $this->actingAs($user)
+            ->get('/dashboard');
+      $response->assertStatus(200);
+    }
+    public function testGuestIsRedirectToLogin()
+    {
+        $response = $this->get('/dashboard');
+
+        $response->assertRedirect('login');
+    }
+
 }
