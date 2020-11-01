@@ -7,6 +7,7 @@ use Tests\TestCase;
 
 class isManagerTest extends TestCase
 {
+    
     /**
      * A basic unit test example.
      *
