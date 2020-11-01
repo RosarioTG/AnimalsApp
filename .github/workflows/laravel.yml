@@ -13,7 +13,7 @@ jobs:
        env:
            POSTGRES_USER: mydb
            POSTGRES_PASSWORD: thisisasecretpassword
-           POSTGRES_DB: mydb
+           POSTGRES_DB: database
        ports:
            - 5432:5432
   env:
