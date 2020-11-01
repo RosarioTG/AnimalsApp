@@ -20,8 +20,9 @@ class CreateAnimalsTable extends Migration
             $table->string('image');
             $table->string('extinto');
             $table->timestamps();
-            $table->foreignId('specie_id');
-            
+            $table->foreignId('specie_id')
+                  ->references('id')->on('species')
+                  ->onDelete('cascade'); 
         });
     }
 
