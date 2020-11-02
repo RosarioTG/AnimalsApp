@@ -60,11 +60,16 @@
             <form method= 'POST' action="   {{route('specie.store')}}" class="form bg-white p-6 my-10 relative">
                @csrf
                 <div class="flex space-x-5 mt-3">
+                <label for="name" class="block text-sm font-medium leading-5 text-gray-700 ">
+                            Nombre
+                        </label>
                     <input type="text" name="name" id="name" placeholder=" Name"  class="border p-2  w-1/2">
                    
                   
                 </div>
-            
+                <label for="name" class="block text-sm font-medium leading-5 text-gray-700 ">
+                          Descripcion
+                        </label>
                 <textarea name="description" id="description" cols="10" rows="3" placeholder="Description" class="border p-2 mt-3 w-full"></textarea>
 
                 <input type="submit" value="Insertar" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3">
