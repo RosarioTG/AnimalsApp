@@ -45,8 +45,20 @@ class AnimalsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('create',Animal::class);
-       $input = $request->all();
+         $input = $request->all();
+
+        // Save file to disk
+        if($request->has('fileToUpload'))
+        {
+            $filePath = $request->file('fileToUpload')->store('files', [
+                'disk' => 'public'
+            ]);
+            $input['image'] = $filePath;
+        }
+
+    $input['user_id'] = $request->user()->id;
+      $input = $request->all();
+       $request ->file('image')->Store('files');
       Animal::create(['name'=> $input['name'] , 
                      'image'=> $input['image'] ,
                      'description'=> $input['description'] , 
