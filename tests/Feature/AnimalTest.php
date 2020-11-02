@@ -83,7 +83,7 @@ class AnimalTest extends TestCase
        
     }
 
-    public function testDestroyTask()
+    public function testDestroyAnimal()
     {
         $user = User::factory()->create(['role' => 'manager']);
         $animal = Animal::factory()->create(['user_id' => $user->id ]);
