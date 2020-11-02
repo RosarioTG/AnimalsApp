@@ -40,15 +40,26 @@
          </div>
       </div>
    </nav>
-            <form method= 'POST' action="   {{route('animal.store')}}" class="form bg-white p-6 my-10 relative">
+            <form method= 'POST' action="   {{route('animal.store')}}" class="form bg-white p-6 my-10 relative" enctype="multipart/form-data">
                @csrf
+               <label for="name" class="block text-sm font-medium leading-5 text-gray-700 ">
+                            Nombre
+                        </label>
                 <div class="flex space-x-5 mt-3">
+                
                     <input type="text" name="name" id="name" placeholder=" Name"  class="border p-2  w-1/2">
-
+                    </div>
+                
+                    <label class="block font-medium text-sm text-gray-700" for="cases">
+                           Extinto
+                        </label>
+                        <div class="flex space-x-5 mt-3">
                     <input type="text" name="extinto" id="extinto" placeholder=" Extinto"  class="border p-2  w-1/2">
                    
-                </div>
-            
+                    </div>
+                    <label class="block font-medium text-sm text-gray-700" for="cases">
+                       Usuario
+                        </label>
         <div class="relative">
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="user_id" name="user_id" >
         @foreach($users as $user)
@@ -56,6 +67,9 @@
                 @endforeach
         </select>
         </div>
+        <label class="block font-medium text-sm text-gray-700" for="cases">
+                          Especie
+                        </label>
           <div class="relative">
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="specie_id" name="specie_id" >
         @foreach($species as $specie)
@@ -63,7 +77,13 @@
                 @endforeach
         </select>
         </div>
-                <input type="text" name="image" id="image" placeholder="Image" class="border p-2 w-full mt-3">
+        <label class="block font-medium text-sm text-gray-700" for="cases">
+                        Imagen
+                        </label>
+                <input type="file" name="image" id="image" placeholder="Image" class="border p-2 w-full mt-3">
+                <label class="block font-medium text-sm text-gray-700" for="cases">
+                        Descripcion
+                        </label>
                 <textarea name="description" id="description" cols="10" rows="3" placeholder="Description" class="border p-2 mt-3 w-full"></textarea>
 
                 <input type="submit" value="Insertar" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3">
