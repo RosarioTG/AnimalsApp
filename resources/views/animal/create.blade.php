@@ -58,7 +58,7 @@
                    
                     </div>
                     <label class="block font-medium text-sm text-gray-700" for="cases">
-                       Usuario
+                       Usuarios
                         </label>
         <div class="relative">
         <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="user_id" name="user_id" >
