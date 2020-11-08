@@ -23,7 +23,7 @@ class EditTestAnimal extends DuskTestCase
             'role' => 'manager'
         ]);
         $animal= Animal::factory() ->create([
-            'user_id ' => $user -> id
+            'user_id ' => $user->id
         ]);
         $specie =Specie::factory() ->create();
         $this->browse(function (Browser $browser) use ($user , $specie,$animal) {
