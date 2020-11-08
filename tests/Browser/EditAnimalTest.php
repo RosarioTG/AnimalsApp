@@ -3,6 +3,7 @@
 namespace Tests\Browser;
 use App\Models\User;
 use App\Models\Animal;
+use App\Models\Specie;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
@@ -23,13 +24,13 @@ class EditTestAnimal extends DuskTestCase
             'role' => 'manager'
         ]);
         $animal= Animal::factory() ->create([
-            'user_id ' => $user->id
+            'user_id' => $user->id
         ]);
         $specie =Specie::factory() ->create();
         $this->browse(function (Browser $browser) use ($user , $specie,$animal) {
         $browser->visit('/login')
               ->type('email',$user->email)
-              ->type('password',$user->password)
+              ->type('password','12345678')
               ->press('LOGIN')
               ->visit('animal')
                  ->assertSee($animal->name )
