@@ -2,6 +2,7 @@
 
 namespace Tests\Browser;
 use App\Models\User;
+use App\Models\Animal;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
@@ -21,7 +22,7 @@ class EditTestAnimal extends DuskTestCase
             'password' => bcrypt('12345678'),
             'role' => 'manager'
         ]);
-        $animal =Animal::factory() ->create([
+        $animal= Animal::factory() ->create([
             'user_id ' => $user -> id
         ]);
         $specie =Specie::factory() ->create();
