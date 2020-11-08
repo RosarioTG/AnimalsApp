@@ -77,7 +77,7 @@
                 @endforeach
         </select>
         </div>
-        <label class="block font-medium text-sm text-gray-700" for="cases">
+        <label class="block font-medium text-sm text-gray-700" for="image">
                         Imagen
                         </label>
                 <input type="file" name="image" id="image" placeholder="Image" class="border p-2 w-full mt-3">

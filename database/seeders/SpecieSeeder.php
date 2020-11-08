@@ -14,6 +14,6 @@ class SpecieSeeder extends Seeder
      */
     public function run()
     {
-      Specie::factory()->create();
+      // Specie::factory()->create();
     }
 }

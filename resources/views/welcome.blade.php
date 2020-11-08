@@ -76,7 +76,7 @@
 @foreach ($specie->animals as $Animal)
 
 <div class="md:flex shadow-lg  mx-6 md:mx-auto my-20 max-w-lg md:max-w-2xl h-64">
-<img class="h-full w-full md:w-1/3 object-cover rounded-lg " src="{{$Animal-> image}}" >
+<img class="h-full w-full md:w-1/3 object-cover rounded-lg " src="{{$Animal->public_image}}" >
    <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
       <div class="flex items-center">
          <h2 class="text-xl text-gray-800 font-medium mr-auto " >{{$Animal-> name}}</h2>
