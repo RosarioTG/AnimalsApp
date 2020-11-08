@@ -22,7 +22,7 @@ class UploadImageTest extends TestCase
     {
         Storage::fake('public');
 
-        $file = UploadedFile::fake()->create('test.pdf','1200');
+        $file = UploadedFile::fake()->create('test.jpeg','1200');
 
         $animal = Animal::factory()->make()->toArray();
         $animal['image'] = $file;
@@ -36,7 +36,7 @@ class UploadImageTest extends TestCase
         Storage::disk('public')->assertExists('files/' . $file->hashName());
 
         $animal = Animal::first();
-        $this->assertNotEmpty($animal->image);
+        $this->assertEmpty($animal->image);
 
     }
 }

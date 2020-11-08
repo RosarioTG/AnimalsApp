@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="427e1fc9-44ac-4935-a8f8-2b22a296b0c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Animal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AnimalSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AnimalSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SpecieSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SpecieSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/animal/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/UploadImageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UploadImageTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,6 +184,7 @@
       <workItem from="1604270379463" duration="72000" />
       <workItem from="1604272166366" duration="629000" />
       <workItem from="1604786793844" duration="620000" />
+      <workItem from="1604845506485" duration="7972000" />
     </task>
     <servers />
   </component>
@@ -193,6 +192,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="693" y="289" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604846320883">
+      <screen x="0" y="27" width="1920" height="1009" />
+    </state>
+    <state x="693" y="289" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1009@0.27.1920.1009" timestamp="1604846320883" />
     <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603472998216">
       <screen x="0" y="27" width="1920" height="1009" />
     </state>

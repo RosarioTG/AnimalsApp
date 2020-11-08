@@ -48,10 +48,10 @@ class AnimalsController extends Controller
          $input = $request->all();
 
         
-            $filePath = $request->file('image')->store('files', [
+            $file= $request->file('image')->store('files', [
                 'disk' => 'public'
             ]);
-            $input['image'] = $filePath;
+            $input['image'] = $file;
       
 
     $input['user_id'] = $request->user()->id;
