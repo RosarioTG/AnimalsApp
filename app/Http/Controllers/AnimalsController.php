@@ -54,8 +54,8 @@ class AnimalsController extends Controller
             $input['image'] = $file;
       
 
-    $input['user_id'] = $request->user()->id;
-      $input = $request->all();
+    // $input['user_id'] = $request->user()->id;
+    //   $input = $request->all();
       Animal::create(['name'=> $input['name'] , 
                      'image'=> $input['image'] ,
                      'description'=> $input['description'] , 
