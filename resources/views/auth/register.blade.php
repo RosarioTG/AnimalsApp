@@ -24,8 +24,14 @@
             </div>
             <div class="mt-4">
                 <x-jet-label value="{{ __('Role') }}" />
-                <x-jet-input class="block mt-1 w-full" type="role" name="role" :value="old('role')" required />
+                <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" name="role" id="role" >
+                        <option disabled selected >Selection Role </option>
+                        <option value="manager" >Manager</option>
+                        <option value="user" >User</option>
+
+                </select>
             </div>
+
 
             <div class="mt-4">
                 <x-jet-label value="{{ __('Password') }}" />
