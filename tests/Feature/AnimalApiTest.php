@@ -24,6 +24,8 @@ class AnimalApiTest extends TestCase
         
         $response->assertStatus(200);
         $response->assertJsonCount(1);
+        $response->assertJsonFragment([
+            "name" => $animal->name]);
         $response->assertJsonFragment(
         ['user_id'=>$user->id]
         );
@@ -39,9 +41,10 @@ class AnimalApiTest extends TestCase
         $animal = Animal::factory()->create(['user_id' => $userTwo->id]);
       
         $response = $this->actingAs($userOne)->getJson('/api/animal');
-
+        $response->assertJsonMissing([
+            "name" => $animal->name]);
         $response->assertStatus(200);
-        $response->assertJsonCount(0);
+        $response->assertJsonCount(1);
 
     }
 
