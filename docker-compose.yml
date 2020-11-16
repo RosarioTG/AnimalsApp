@@ -32,7 +32,7 @@ services:
 
   selenium:
     image: selenium/standalone-chrome
-  adminers: 
+  adminer: 
     image: adminer
     restart: always
     ports:

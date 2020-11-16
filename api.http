@@ -1,0 +1,11 @@
+GET http://localhost:8080/api/user
+Accept: application/json
+Authorization: Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn
+
+###
+
+GET http://localhost:8080/api/animal
+Accept: application/json
+Authorization: Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn
+
+
