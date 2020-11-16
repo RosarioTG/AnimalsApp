@@ -68,27 +68,4 @@ class AnimalPolicy
         return true;
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Animal  $animal
-     * @return mixed
-     */
-    public function restore(User $user, Animal $animal)
-    {
-        return true;//
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Animal  $animal
-     * @return mixed
-     */
-    public function forceDelete(User $user, Animal $animal)
-    {
-        return true;
-    }
 }
