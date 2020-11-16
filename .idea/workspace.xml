@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="427e1fc9-44ac-4935-a8f8-2b22a296b0c4" name="Default Changelist" comment="" />
+    <list default="true" id="427e1fc9-44ac-4935-a8f8-2b22a296b0c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AnimalsApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnimalsApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app.dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,6 +150,7 @@
       <path value="$PROJECT_DIR$/vendor/sabre/event" />
       <path value="$PROJECT_DIR$/vendor/felixfbecker/advanced-json-rpc" />
       <path value="$PROJECT_DIR$/vendor/microsoft/tolerant-php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iI8YcLXkdvwVyR1fag6246d8t4" />
@@ -150,16 +159,143 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deliveryApp" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/animal" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605331308000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6Inc5aEJlZXZ5cWVURkZxeWtkdmY3M0E9PSIsInZhbHVlIjoiWENSd0lPZXN1SzlnQTNzWjhEZTR3UWxBMnBzcXhYa1hORTJIb0lyd2VNTVlmSWp6SWQ0T0hBdE8xOG1EeDB0VWNjZm1raFBqbHQ4OW1IUjFvaElIZGJGVHp4Tk55WTBZUEhHUDBqWk1MbFZJaWFCNURTbng4ZVhKcmFFNUFSVkciLCJtYWMiOiJkZmQyMDc4ZDI0NWZkMWIyMTAzMWJjYWQ5OTE4YTM4ZTdkODc3OWJmYTI3ZjhlM2M4NzlkMzAxZDBiNDk2MzgyIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1605331308000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6Ik1MY0d3SnpBd0VaYWs1M2EzMzVSMGc9PSIsInZhbHVlIjoib2ltN2ZnU1RvandXMG9DYmJKVEVoQVBoa1VIc3loRS8vQXU1RTQwNHR0ZFY4dEJZdnZsTklKakEyNEh3cnNLQktSMHdWRVZlOXZETXpRNFhUMVo5NUJKeVVVOGdLbS9XL1Q5Y3dOdGk5ZS9USXd2ZHhjYmhxdG1ta3Q3aDZLM3AiLCJtYWMiOiI2OTg0MjM4MjZmZWIwZGE5MzNmZWYyMGVlZDU0MjI3MTM0NGU5YTNjM2QzN2IyYzAxZTQ2MmUzNjBlM2Y5Njc0In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/animals" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605331308000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6Inc5aEJlZXZ5cWVURkZxeWtkdmY3M0E9PSIsInZhbHVlIjoiWENSd0lPZXN1SzlnQTNzWjhEZTR3UWxBMnBzcXhYa1hORTJIb0lyd2VNTVlmSWp6SWQ0T0hBdE8xOG1EeDB0VWNjZm1raFBqbHQ4OW1IUjFvaElIZGJGVHp4Tk55WTBZUEhHUDBqWk1MbFZJaWFCNURTbng4ZVhKcmFFNUFSVkciLCJtYWMiOiJkZmQyMDc4ZDI0NWZkMWIyMTAzMWJjYWQ5OTE4YTM4ZTdkODc3OWJmYTI3ZjhlM2M4NzlkMzAxZDBiNDk2MzgyIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1605331308000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6Ik1MY0d3SnpBd0VaYWs1M2EzMzVSMGc9PSIsInZhbHVlIjoib2ltN2ZnU1RvandXMG9DYmJKVEVoQVBoa1VIc3loRS8vQXU1RTQwNHR0ZFY4dEJZdnZsTklKakEyNEh3cnNLQktSMHdWRVZlOXZETXpRNFhUMVo5NUJKeVVVOGdLbS9XL1Q5Y3dOdGk5ZS9USXd2ZHhjYmhxdG1ta3Q3aDZLM3AiLCJtYWMiOiI2OTg0MjM4MjZmZWIwZGE5MzNmZWYyMGVlZDU0MjI3MTM0NGU5YTNjM2QzN2IyYzAxZTQ2MmUzNjBlM2Y5Njc0In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/user" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+    <configuration name="api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="api#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/api.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.api#2" />
+        <item itemvalue="HTTP Request.api#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -181,6 +317,8 @@
       <workItem from="1604786793844" duration="620000" />
       <workItem from="1604845506485" duration="7972000" />
       <workItem from="1605222187335" duration="22000" />
+      <workItem from="1605322051132" duration="9730000" />
+      <workItem from="1605535290504" duration="42000" />
     </task>
     <servers />
   </component>
@@ -192,9 +330,46 @@
       <screen x="0" y="27" width="1920" height="1009" />
     </state>
     <state x="693" y="289" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1009@0.27.1920.1009" timestamp="1604846320883" />
-    <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603472998216">
-      <screen x="0" y="27" width="1920" height="1009" />
+    <state x="492" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605535315319">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="492" y="154" width="424" height="484" key="FileChooserDialogImpl/53.27.1313.741@53.27.1313.741" timestamp="1605535315319" />
+    <state width="1267" height="241" key="GridCell.Tab.0.bottom" timestamp="1605334232859">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state width="1267" height="241" key="GridCell.Tab.0.bottom/53.27.1313.741@53.27.1313.741" timestamp="1605334232859" />
+    <state width="1267" height="241" key="GridCell.Tab.0.center" timestamp="1605334232857">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state width="1267" height="241" key="GridCell.Tab.0.center/53.27.1313.741@53.27.1313.741" timestamp="1605334232857" />
+    <state width="1267" height="241" key="GridCell.Tab.0.left" timestamp="1605334232856">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state width="1267" height="241" key="GridCell.Tab.0.left/53.27.1313.741@53.27.1313.741" timestamp="1605334232856" />
+    <state width="1267" height="241" key="GridCell.Tab.0.right" timestamp="1605334232858">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state width="1267" height="241" key="GridCell.Tab.0.right/53.27.1313.741@53.27.1313.741" timestamp="1605334232858" />
+    <state x="95" y="27" width="1261" height="741" key="SettingsEditor" timestamp="1605330777959">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="95" y="27" width="1261" height="741" key="SettingsEditor/53.27.1313.741@53.27.1313.741" timestamp="1605330777959" />
+    <state x="304" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605326391504">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="304" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/53.27.1313.741@53.27.1313.741" timestamp="1605326391504" />
+    <state x="373" y="175" width="672" height="677" key="run.anything.popup" timestamp="1605326133993">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="373" y="175" width="672" height="677" key="run.anything.popup/53.27.1313.741@53.27.1313.741" timestamp="1605326133993" />
+    <state x="372" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605330618108">
+      <screen x="53" y="27" width="1313" height="741" />
+    </state>
+    <state x="372" y="89" width="672" height="678" key="search.everywhere.popup/53.27.1313.741@53.27.1313.741" timestamp="1605330618108" />
+    <state x="850" y="334" width="491" height="166" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1605329342145">
+      <screen x="53" y="27" width="1313" height="741" />
     </state>
     <state x="1165" y="445" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1009@0.27.1920.1009" timestamp="1603472998216" />
+    <state x="850" y="334" width="491" height="166" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/53.27.1313.741@53.27.1313.741" timestamp="1605329342145" />
   </component>
 </project>
