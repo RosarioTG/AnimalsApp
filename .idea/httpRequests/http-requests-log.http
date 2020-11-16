@@ -1,0 +1,38 @@
+GET http://localhost:8080/api/animal
+Accept: application/json
+Authorization: Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn
+
+<> 2020-11-14T022249.200.json
+
+###
+
+GET http://localhost:8080/api/animals
+Accept: application/json
+Authorization: Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn
+
+<> 2020-11-14T022212.404.json
+
+###
+
+GET http://localhost:8080/api/user
+Accept: application/json
+Authorization: Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn
+
+<> 2020-11-14T010535.200.json
+
+###
+
+GET http://localhost:8080/api/user
+Accept: application/json
+Authorization: Bearer bMDzPtGWYt32OMVXIQg82rhGXd7q5xznySYmgiYn
+
+<> 2020-11-14T122531.200.json
+
+###
+
+GET http://localhost:8080/api/user
+
+<> 2020-11-14T122149.200.html
+
+###
+
