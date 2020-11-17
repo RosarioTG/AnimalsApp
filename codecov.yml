@@ -1,4 +1,4 @@
 ignore:
   - "app/Actions"  
   - "app/Http/Middleware"
-  -"/app/Providers/BroadcastServiceProvider.php/"
+ 
