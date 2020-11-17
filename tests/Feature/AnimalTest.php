@@ -91,7 +91,7 @@ class AnimalTest extends TestCase
         $animal = Animal::all();
         $this->assertNotEquals($animal->count(), 0);
     }
-    public function testViewCovidStatisticList()
+    public function testViewt()
     {
         $animal = Animal::factory()->create();
         $user = User::factory()->create(['role' => 'manager']);

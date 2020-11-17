@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\User;
 use App\Models\Specie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -24,7 +24,8 @@ class SpecieFactory extends Factory
     {
         return [
             'name' => $this -> faker->title,
-            'description' => $this -> faker-> text
+            'description' => $this -> faker-> text,
+            'user_id' =>User::factory()->create(),
         ];
     }
 }

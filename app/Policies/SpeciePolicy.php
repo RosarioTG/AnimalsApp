@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Animal;
+use App\Models\Specie;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class AnimalPolicy
+class SpeciePolicy
 {
     use HandlesAuthorization;
 
@@ -18,17 +18,17 @@ class AnimalPolicy
      */
     public function viewAny(User $user)
     {
-       return true;
+        return true;
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Models\Specie  $specie
      * @return mixed
      */
-    public function view(User $user, Animal $animal)
+    public function view(User $user, Specie $specie)
     {
         return true;
     }
@@ -48,24 +48,47 @@ class AnimalPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Models\Specie  $specie
      * @return mixed
      */
-    public function update(User $user, Animal $animal)
+    public function update(User $user, Specie $specie)
     {
-        return $user->id === $animal->user->id ;
+        return $user->id === $specie->user->id ;
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Models\Specie  $specie
      * @return mixed
      */
-    public function delete(User $user, Animal $animal)
+    public function delete(User $user, Specie $specie)
     {
-        return $user->id === $animal->user->id ;
+        //
     }
 
+    /**
+     * Determine whether the user can restore the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Specie  $specie
+     * @return mixed
+     */
+    public function restore(User $user, Specie $specie)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can permanently delete the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Specie  $specie
+     * @return mixed
+     */
+    public function forceDelete(User $user, Specie $specie)
+    {
+        //
+    }
 }

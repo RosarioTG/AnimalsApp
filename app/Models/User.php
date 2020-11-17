@@ -64,6 +64,10 @@ class User extends Authenticatable
     {
         return $this -> hasMany(Animal::class);
     }
+    public function Specie()
+    {
+        return $this -> hasMany(Specie::class);
+    }
     public function isManager()
     {
         return $this -> attributes['role']== 'manager';

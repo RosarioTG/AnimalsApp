@@ -28,13 +28,25 @@ class SpecieTest extends TestCase
         $user = User::factory()->create(['role' => 'manager']);
         $response = $this->actingAs($user)
             ->get(route('specie.create'));
-        $response->assertStatus(200);
+            $response->assertStatus(200);
        
+        }
+        public function testStoreSpecie()
+        {
+         $user = User::factory()->create(['role' => 'manager']);
+            $response = $this->actingAs($user)->post('specie', 
+            ['name' => 'My Specie', 
+            'description' => 'This is a description',
+            'user_id' => $user->id,
+          ]);
+            $response = $this->actingAs($user)->get('/specie');
+            $specie = Specie::first();
+            $this->assertNotEquals($specie->name, 'My Specie');
         }
         public function testAuthorCanEditSpecie()
     {
         $user = User::factory()->create(['role' => 'manager']);
-        $specie = Specie::factory()->create( []);
+        $specie = Specie::factory()->create( ['user_id' => $user->id ]);
         $response = $this->actingAs($user)->get('specie/'.$specie->id.'/edit/');
         $response->assertStatus(200);
      
@@ -44,8 +56,9 @@ class SpecieTest extends TestCase
 
     public function testEditSpecie()
     {
-        $specie = Specie::factory()->create();
+       
         $user = User::factory()->create(['role' => 'manager']);
+        $specie = Specie::factory()->create(['user_id' => $user->id ]);
      $response = $this->actingAs($user)->put('specie/'.$specie->id, 
         ['name' => 'My Specie', 
         ]);
@@ -58,17 +71,17 @@ class SpecieTest extends TestCase
     public function testDestroySpecie()
     {
         $user = User::factory()->create(['role' => 'manager']);
-        $specie = Specie::factory()->create();
+        $specie = Specie::factory()->create(['user_id' => $user->id ]);
         $response = $this->actingAs($user)->delete('specie/'.$specie->id);
         $specie = Specie::all();
         $this->assertNotEquals($specie->count(), 0);
     }
-    // public function testViewCovidStatisticList()
-    // {
-    //     $animal = Animal::factory()->create();
-    //     $user = User::factory()->create(['role' => 'manager']);
-    //     $response = $this->actingAs($user)->get('animal');
+    public function testView()
+    {
+        $specie = Specie::factory()->create();
+        $user = User::factory()->create(['role' => 'manager']);
+        $response = $this->actingAs($user)->get('specie');
      
-    //     $response->assertSee($animal->created_at);
-    // }
+        $response->assertSee( $specie->created_at);
+    }
 }

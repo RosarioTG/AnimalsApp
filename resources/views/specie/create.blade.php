@@ -17,21 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c151b27f34.js" crossorigin="anonymous"></script>
     
-    
-    <title>Master</title>
-
-  <style>
-  .icon::after{
-  content: '';
-  display: block;
-  position: absolute;
-  border-top: 23px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 12px solid #3182ce;
-  left: 100%;
-  top: 0;
-}
-  </style>
    
 </head>
   
@@ -71,9 +56,18 @@
                           Descripcion
                         </label>
                 <textarea name="description" id="description" cols="10" rows="3" placeholder="Description" class="border p-2 mt-3 w-full"></textarea>
-
+                <label class="block font-medium text-sm text-gray-700" for="cases">
+                       Usuario
+                        </label>
+        <div class="relative">
+        <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="user_id" name="user_id" >
+        @foreach($users as $user)
+                <option value="{{$user -> id}}" selected> {{$user -> name}}  </option>
+                @endforeach
+        </select>
+        </div>
                 <input type="submit" value="Insertar" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3">
-
+               
             </form>
     
   </body>

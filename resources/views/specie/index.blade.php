@@ -24,8 +24,9 @@
                 </div>
                 <div class="block relative">
        
-               
+                @can('create',App\Models\Specie::class)
                <a  dusk='create'href="{{ url('specie/create') }}" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Crear Nueva Specie</a>
+               @endcan
             </div>
                 </div>
             </div>
@@ -35,6 +36,10 @@
                         <thead>
                      
                             <tr>
+                                <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                 Nombre  Usuario
+                                </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                  Nombre   Especie
@@ -56,6 +61,18 @@
                         <tbody>
                         @foreach ($species as $specie)
                             <tr>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <div class="flex items-center">
+                                    <div class="flex-shrink-0">
+                         <img class="h-10 w-10 rounded-full" src="{{$specie->user->getProfilePhotoUrlAttribute()}}" />
+                                     </div>
+                                <div class="ml-3">
+                                            <p class="text-gray-900 whitespace-no-wrap">
+                                            {{$specie-> user->name }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <div class="flex items-center">
                                        
@@ -83,9 +100,11 @@
                                 <form method="POST" action="{{ route('specie.destroy', $specie) }}">
                                @method('DELETE')
                                   @csrf
+                                
                           <button type="submit" dusk="borrar" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
                                     borrar
                                     </button>
+                                  
                                         </form>
                               </td>
                             
@@ -93,8 +112,10 @@
 
                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href=""><span>
+                                @can('update',$specie)
                                 <div class="bg-gray-200 text-sm text-gray-500 leading-none border-2 border-gray-200 rounded-full inline-flex">
                                <a href="{{ route('specie.edit',$specie -> id ) }}" dusk="edit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Editar</a>
+                               @endcan
                             </li>
                            </form>
                            </td>

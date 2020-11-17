@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Specie;
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class SpecieController extends Controller
 {
     /**
@@ -25,9 +25,10 @@ class SpecieController extends Controller
      */
     public function create()
     {
+        $this->authorize('create',Specie::class);
         $species = Specie::all(); 
-       
-        return view('specie.create',['species' => $species ]);
+        $users = User::all();
+        return view('specie.create',['species' => $species,'users' => $users ]);
     }
 
     /**
@@ -40,7 +41,8 @@ class SpecieController extends Controller
     {
         $input = $request->all();
         Specie::create(['name'=> $input['name'] , 
-                       'description'=> $input['description'] ]);
+                       'description'=> $input['description'] ,
+                       'user_id'=>$input['user_id'] ]);
         return redirect('specie');
     }
 
@@ -63,7 +65,7 @@ class SpecieController extends Controller
      */
     public function edit(Specie $specie)
     {
-       
+        $this->authorize('update',$specie);
         return view ('specie.edit', ['specie' => $specie ]);
     }
 
@@ -76,6 +78,7 @@ class SpecieController extends Controller
      */
     public function update(Request $request, Specie $specie)
     {
+        $this->authorize('update',$specie);
         $input=$request ->all();
        $specie -> update(['name'=> $input['name'] , 
                          'description'=> $input['description'] , 
@@ -91,6 +94,7 @@ class SpecieController extends Controller
      */
     public function destroy(Specie $specie)
     {
+       
         $specie -> delete();
         return redirect('specie');
     }

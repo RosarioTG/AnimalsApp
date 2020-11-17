@@ -2,11 +2,12 @@
 
 namespace Tests\Browser;
 use App\Models\User;
+use App\Models\Specie;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class DeleteTest extends DuskTestCase
+class EditSpecieTest extends DuskTestCase
 {
     use DatabaseMigrations;
     /**
@@ -14,13 +15,17 @@ class DeleteTest extends DuskTestCase
      *
      * @return void
      */
-    public function testBorrarSpecie()
+    public function testEditSpecie()
     {
         $user =User::factory() ->create([
             'email'=> 'test@laravel.com',
-            'password' => bcrypt('12345678')
+            'password' => bcrypt('12345678'),
+            'role' => 'manager'
         ]);
-        $this->browse(function (Browser $browser) use ($user) {
+        $specie= Specie::factory() ->create([
+            'user_id' => $user->id
+        ]);
+        $this->browse(function (Browser $browser) use ($user, $specie) {
         $browser->visit('/login')
               ->type('email',$user->email)
               ->type('password','12345678')
@@ -31,7 +36,11 @@ class DeleteTest extends DuskTestCase
                  ->type('description', 'This is created with dusk')
                  ->press('Insertar')
                  ->assertSee('Testing Specie')
-                 ->click('@borrar');
-                });
-            }
+                 ->click('@edit')
+                 ->type('name', 'Edit Dusk')
+                 ->type('description', 'This is edit with dusk')
+                 ->press('Insertar')
+                ->assertSee('Edit Dusk');
+        });
+    }
 }
