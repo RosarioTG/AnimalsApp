@@ -10,9 +10,7 @@ use App\Models\Specie;
 use App\Models\User;
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('animal',AnimalsController::class);

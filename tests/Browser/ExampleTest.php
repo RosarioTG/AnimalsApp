@@ -21,8 +21,8 @@ class ExampleTest extends DuskTestCase
                     ->assertSee('Register');
 
         });
-       
-    }
 
-  
+        
+    }
+    
 }
