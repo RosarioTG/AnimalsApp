@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalsController;
-use App\Http\Controllers\homeController;
 use App\Http\Controllers\SpecieController;
 use App\Models\Animal;
 use App\Models\Specie;
