@@ -47,17 +47,6 @@ class SpecieController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Specie  $specie
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Specie $specie)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Specie  $specie
