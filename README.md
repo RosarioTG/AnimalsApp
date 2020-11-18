@@ -12,7 +12,13 @@
 
 - Install Docker
 - Clone the repository
-- Configure the connection to the database in the .env file - DB_CONNECTION=pgsql - DB_HOST=database - DB_PORT=5432 - DB_DATABASE=mydb - DB_USERNAME=mydb -      DB_PASSWORD=thisisasecretpassword
+- Configure the connection to the database in the .env file 
+   - DB_CONNECTION=pgsql 
+   - DB_HOST=database 
+   - DB_PORT=5432
+   - DB_DATABASE=mydb 
+   - DB_USERNAME=mydb 
+   - DB_PASSWORD=thisisasecretpassword
 - Execute the command (sudo docker run --rm -v $ (pwd): / app composer install) to download missing files for the correct operation of the application
 - Generate the key for the .env file with the following command (php artisan key: generate)
 -Run docker-compose up -d, open the browser and go to localhost: 8080 
