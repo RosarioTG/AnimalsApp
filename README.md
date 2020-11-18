@@ -1,8 +1,10 @@
-<h1>Repository for the subject Web Programming II ,Tupar Exactas Unicen</h1>
-[![Codacy
-Badge](https://api.codacy.com/project/badge/Grade/2c7ac6554ef7488f957aa0d2096338ea)](https://app.codacy.com/gh/RosarioTG/AnimalsApp?utm_source=github.com&utm_medium=referral&utm_content=RosarioTG/AnimalsApp&utm_campaign=Badge_Grade)
-[![codecov](https://codecov.io/gh/RosarioTG/AnimalsApp/branch/master/graph/badge.svg)](https://codecov.io/gh/RosarioTG/AnimalsApp) ![Static Code Analysis](https://github.com/RosarioTG/AnimalsApp/workflows/Static%20Code%20Analysis/badge.svg)
-![Laravel](https://github.com/RosarioTG/AnimalsApp/workflows/Laravel/badge.svg) ![Dusk Tests](https://github.com/RosarioTG/AnimalsApp/workflows/Dusk%20Tests/badge.svg)
+##Repository for the subject Web Programming II ,Tupar Exactas Unicen
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c7ac6554ef7488f957aa0d2096338ea)](https://app.codacy.com/gh/RosarioTG/AnimalsApp?utm_source=github.com&utm_medium=referral&utm_content=RosarioTG/AnimalsApp&utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/RosarioTG/AnimalsApp/branch/master/graph/badge.svg)](https://codecov.io/gh/RosarioTG/AnimalsApp)
+![Static Code Analysis](https://github.com/RosarioTG/AnimalsApp/workflows/Static%20Code%20Analysis/badge.svg)
+![Laravel](https://github.com/RosarioTG/AnimalsApp/workflows/Laravel/badge.svg)
+![Dusk Tests](https://github.com/RosarioTG/AnimalsApp/workflows/Dusk%20Tests/badge.svg)
 ![Deploy](https://github.com/RosarioTG/AnimalsApp/workflows/Deploy/badge.svg)
 
 <h2>Steps to follow to download the project</h2>
