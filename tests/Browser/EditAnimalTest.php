@@ -3,7 +3,7 @@
 namespace Tests\Browser;
 use App\Models\User;
 use App\Models\Animal;
-use App\Models\Specie;
+
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
