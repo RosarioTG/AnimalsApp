@@ -26,8 +26,7 @@ class EditTestAnimal extends DuskTestCase
         $animal= Animal::factory() ->create([
             'user_id' => $user->id
         ]);
-        $specie =Specie::factory() ->create();
-        $this->browse(function (Browser $browser) use ($user , $specie,$animal) {
+       $this->browse(function (Browser $browser) use ($user , $specie,$animal) {
         $browser->visit('/login')
               ->type('email',$user->email)
               ->type('password','12345678')
