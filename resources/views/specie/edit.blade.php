@@ -34,7 +34,7 @@
          
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
-              <p class= "bg-900">Insertar nuevo Animal</p>
+              <p class= "bg-900">Editar Specie </p>
             </nav>
          </div>
          

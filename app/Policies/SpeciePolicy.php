@@ -63,10 +63,7 @@ class SpeciePolicy
      * @param  \App\Models\Specie  $specie
      * @return mixed
      */
-    public function delete(User $user, Specie $specie)
-    {
-        //
-    }
+   
 
     /**
      * Determine whether the user can restore the model.
@@ -75,10 +72,7 @@ class SpeciePolicy
      * @param  \App\Models\Specie  $specie
      * @return mixed
      */
-    public function restore(User $user, Specie $specie)
-    {
-        //
-    }
+    
 
     /**
      * Determine whether the user can permanently delete the model.
@@ -87,8 +81,5 @@ class SpeciePolicy
      * @param  \App\Models\Specie  $specie
      * @return mixed
      */
-    public function forceDelete(User $user, Specie $specie)
-    {
-        //
-    }
+    
 }
