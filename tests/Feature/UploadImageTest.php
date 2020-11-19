@@ -30,11 +30,10 @@ class UploadImageTest extends TestCase
          $user = User::factory()->create(['role' => 'manager']);
         $response = $this->actingAs($user)->post('/animal', $animal);
 
-        $response = $this->actingAs($user)->get('/animal');
-
+       $response->assertRedirect('/animal');
         Storage::disk('public')->assertExists('files/' . $file->hashName());
         $animal = Animal::first();
-        $this->assertNotEmpty( $animal->image);
+        $this->assertNotEmpty($animal->image);
 
     }
 }
