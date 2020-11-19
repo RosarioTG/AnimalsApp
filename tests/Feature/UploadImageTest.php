@@ -33,7 +33,6 @@ class UploadImageTest extends TestCase
         $response = $this->actingAs($user)->get('/animal');
 
         Storage::disk('public')->assertExists('files/' . $file->hashName());
-
         $animal = Animal::first();
         $this->assertNotEmpty( $animal->image);
 
