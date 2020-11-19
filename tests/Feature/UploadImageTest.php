@@ -9,10 +9,11 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
-
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class UploadImageTest extends TestCase
 {
+    use DatabaseMigrations;
     /**
      * A basic feature test example.
      *
