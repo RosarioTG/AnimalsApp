@@ -49,9 +49,8 @@ class AnimalTest extends TestCase
         'user_id' => $user->id,
         'specie_id' => $specie->id
         ]);
-        $response = $this->actingAs($user)->get('/animal');
-        $animal = Animal::first();
-        $this->assertNotEquals($animal->name, 'My Animal');
+       $animal = Animal::first();
+       $this->assertDatabaseHas('animals',$animal -> toArray());
     }
     public function testAuthorCanEditAnimal()
     {
@@ -78,9 +77,7 @@ class AnimalTest extends TestCase
         'specie_id' => $specie->id
         ]);
         $animal = Animal::first();
-        $this->assertNotEquals($animal->name, 'My Animal');
-        $this->assertNotEquals($animal->description, 'This is a description');
-       
+        $this->assertDatabaseHas('animals', $animal-> toArray());
     }
 
     public function testDestroyAnimal()
@@ -89,7 +86,7 @@ class AnimalTest extends TestCase
         $animal = Animal::factory()->create(['user_id' => $user->id ]);
         $response = $this->actingAs($user)->delete('animal/'.$animal->id);
         $animal = Animal::all();
-        $this->assertNotEquals($animal->count(), 0);
+        $this->assertDatabaseCount('animals',$animal->count(), 0 );
     }
     public function testViewt()
     {

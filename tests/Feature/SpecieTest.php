@@ -21,7 +21,13 @@ class SpecieTest extends TestCase
         $response = $this->get(route('specie.create'));
         $response->assertRedirect('login');
     }
-   
+    public function testUserRoleCantCreateAnimal()
+    {
+        $user = User::factory()->create(['role' => 'user']);
+        $response = $this->actingAs($user)
+                ->get(route('animal.create'));
+        $response->assertForbidden();
+    }
 
     public function testManagerRoleCanCreateSpecie()
     {
@@ -31,6 +37,7 @@ class SpecieTest extends TestCase
             $response->assertStatus(200);
        
         }
+
         public function testStoreSpecie()
         {
          $user = User::factory()->create(['role' => 'manager']);
@@ -39,10 +46,12 @@ class SpecieTest extends TestCase
             'description' => 'This is a description',
             'user_id' => $user->id,
           ]);
-            $response = $this->actingAs($user)->get('/specie');
+        
             $specie = Specie::first();
-            $this->assertNotEquals($specie->name, 'My Specie');
+            $this->assertDatabaseHas('species', $specie -> toArray());
         }
+
+
         public function testAuthorCanEditSpecie()
     {
         $user = User::factory()->create(['role' => 'manager']);
@@ -53,6 +62,7 @@ class SpecieTest extends TestCase
         
 
     }
+ 
 
     public function testEditSpecie()
     {
@@ -63,7 +73,7 @@ class SpecieTest extends TestCase
         ['name' => 'My Specie', 
         ]);
         $specie = Specie::first();
-        $this->assertNotEquals($specie->name, 'My Specie');
+        $this->assertDatabaseHas('species', $specie -> toArray());
      
        
     }
@@ -74,12 +84,13 @@ class SpecieTest extends TestCase
         $specie = Specie::factory()->create(['user_id' => $user->id ]);
         $response = $this->actingAs($user)->delete('specie/'.$specie->id);
         $specie = Specie::all();
-        $this->assertNotEquals($specie->count(), 0);
+        $this->assertDatabaseCount('species',$specie->count(), 0 );
     }
     public function testView()
     {
         $specie = Specie::factory()->create();
-        $user = User::factory()->create(['role' => 'manager']);
+      $user = User::factory()->create(['role' => 'manager']);
+ 
         $response = $this->actingAs($user)->get('specie');
      
         $response->assertSee( $specie->created_at);
